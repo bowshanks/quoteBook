@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="quoteBook">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quote Book</title>
+  <link rel="stylesheet" href="./styles/reset.css" >
+  <link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  <body ng-controller="mainCtrl">
+    <header class="header">
+      <div class="title">
+        Quote Book
+      </div>
+      <div class="search-box">
+        <input placeholder="Search" ng-model="quoteFilter"/>
+      </div>
+    </header>
+    <div class="quotes" ng-repeat="quote in quotes | filter: quoteFilter">
+        <span class="qMarks">“</span> {{quote.text}} <span class="qMarks">”</span>
+        <span class="author">{{quote.author}}</span>
+        <div class="removeQuote" ng-click="removeQuote(quote.text)">
+          x
+        </div>
+    </div>
+    <footer class="footer">
+      <form class="new-quote">
+        <textarea type="text" placeholder="New Quote" ng-model="newQuoteText"></textarea>
+        <input type="text" value="New Author" ng-model="newQuoteAuthor">
+        <button type="submit" ng-click="addQuote(newQuoteText,newQuoteAuthor)">Submit</button>
+      </form>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+		<script type="text/javascript" src="./js/mainCtrl.js"></script>
+    <script type="text/javascript" src="./js/dataService.js"></script>
+  </body>
+</html>

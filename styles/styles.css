@@ -1,0 +1,55 @@
+/**/
+.title {
+
+}
+.header {
+  width: 100%;
+  height: 10vh;
+  border: 2px solid black;
+  position: relative;
+}
+.search-box {
+  width: 50px;
+  position: absolute;
+  right: 85px;
+  bottom: 2px;
+}
+.quotes {
+  width: 100%;
+  min-height: 10vh;
+  padding: 20px 20px 20px 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 8px 8px 5px #b3b3b3;
+  position: relative;
+}
+
+.qMarks {
+  font-size: 30px;
+}
+
+.author {
+  color: #b3b3b3;
+  font-size: 20px;
+}
+
+.removeQuote {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+.footer {
+  width: 100%;
+  height: 10vh;
+  /*background: green;*/
+  padding-top: 20px;
+  
+}
